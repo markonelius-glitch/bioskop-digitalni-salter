@@ -1,0 +1,11 @@
+.movie-rating {
+    display: flex;
+    justify-content: center;
+    gap: 5px;  /* Razmak između zvezdica */
+    background-color: white;  /* Belo za rejting da ne pravim transparentne zvezdice :) */
+  }
+
+.star-icon {
+    width: 20px;
+    height: 20px;
+  }

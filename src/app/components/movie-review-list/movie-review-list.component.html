@@ -1,0 +1,18 @@
+<div class="movie-review-list-container">
+    <h2>Recenzije filma: {{ movie.title }}</h2>
+    <div *ngIf="reviews.length > 0; else noReviews">
+      <div *ngFor="let review of reviews" class="review-item">
+        <div class="review-header">
+          <span class="reviewer-name">{{ review[0] }}</span>
+          <span class="review-rating">Ocena: {{ getRating(review[0])}}/5</span>
+        </div>
+        <div class="review-text">
+          <p>{{ review[1] }}</p>
+        </div>
+      </div>
+    </div>
+    <ng-template #noReviews>
+      <p>Još nema recenzija za ovaj film.</p>
+    </ng-template>
+  </div>
+  

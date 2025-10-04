@@ -1,0 +1,29 @@
+<header>
+    <div class="header-top">
+      <div class="user-info">
+        <span *ngIf="isLoggedIn">Zdravo, {{ userName }}</span>
+        <span *ngIf="!isLoggedIn">Niste ulogovani, molimo Vas prijavite se na sistem.</span>
+      </div>
+      <!-- <div class="cart-container">
+        <div class="cart-icon">
+          <img src="assets/images/cart-icon.png" alt="Korpa" />
+          <span class="cart-count">{{ cartItemsCount }}</span>
+        </div>
+      </div> -->
+    </div>
+  
+    <nav>
+      <ul>
+        <li><a routerLink="/movies" routerLinkActive="active" class="nav-button">Lista filmova</a></li>
+        <li>          
+            <a routerLink="/reservation" routerLinkActive="active" class="nav-button">
+              Rezervisani filmovi            
+              <span class="badge-reserved">{{ cartItemsCount }}</span>
+            </a>
+          </li>
+        <li><a routerLink="/profile" routerLinkActive="active" class="nav-button">Ažuriraj svoj profil</a></li>
+        <li><button (click)="logout()" class="nav-button logout-button">Odjavi se</button></li>
+      </ul>
+    </nav>
+  </header>
+  

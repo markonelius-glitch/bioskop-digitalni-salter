@@ -1,0 +1,14 @@
+<div class="cart-container">
+    <h2>Moja Korpa</h2>
+    <div *ngFor="let reservation of reservations">
+      <div class="reservation-item">
+        <h3>{{ reservation.movieId }}</h3>
+        <p><strong>Status:</strong> {{ reservation.status }}</p>
+        <button (click)="removeReservation(reservation)">Obriši</button>
+      </div>
+    </div>
+    <div class="total">
+      <h3>Ukupno: {{ totalPrice | currency }}</h3>
+    </div>
+  </div>
+  

@@ -1,0 +1,130 @@
+.movie-item {
+    display: flex;
+    margin: 20px 0;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+  }
+
+  .movie-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .movie-image img {
+    width: 200px;
+    height: 300px;
+    border-radius: 5px;
+    object-fit: cover;
+    margin-right: 20px;
+  }
+  
+  .movie-details {
+    flex: 1;
+  }
+  
+  .movie-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .movie-director,
+  .movie-genre,
+  .movie-duration,
+  .movie-rating {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+  }
+  
+  .movie-showtimes {
+    margin-top: 15px;
+  }
+  
+  .movie-showtimes h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .movie-showtimes ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .movie-showtimes li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 14px;
+  }
+  
+  .movie-showtimes li span {
+    font-size: 16px;
+  }
+  
+  .showtime-price {
+    font-weight: bold;
+    color: #4caf50;
+    margin-left: 8px;
+  }
+
+  .reserve-button {
+    margin-left: 15px;
+    padding: 3px 12px; 
+    font-size: 13px; 
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-flex; 
+    align-items: center; 
+    justify-content: center;
+    height: 22px;
+  }
+
+  .detail-button {
+    margin: 15px;
+    padding: 3px 12px; 
+    font-size: 13px; 
+    color: white;
+    background-color: #373d44;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-flex; 
+    align-items: center; 
+    justify-content: center;
+    height: 22px;
+  }
+  
+  .reserve-button:hover {
+    background-color: #0056b3; 
+  }
+  
+  .reserve-button:active {
+    background-color: #003f75;
+  }
+  
+  
+  .reserve-button:hover {
+    background-color: #0056b3;
+  }
+
+  .movie-rating {
+    display: flex;
+    justify-content: center;
+    gap: 5px;  /* Razmak između zvezdica */
+    background-color: white;  /* Belo za rejting da ne pravim transparentne zvezdice :) */
+  }
+
+  .star-icon {
+    width: 20px;
+    height: 20px;
+  }
+  

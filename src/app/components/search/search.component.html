@@ -1,0 +1,35 @@
+<div class="search-container">
+    <h2>Pretraga Filmova</h2>
+    <form (ngSubmit)="searchMovies()">
+      <label for="title">Naziv filma</label>
+      <input type="text" id="title" [(ngModel)]="criteria.title" name="title" />
+  
+      <label for="genre">Žanr</label>
+      <input type="text" id="genre" [(ngModel)]="criteria.genre" name="genre" />
+  
+      <label for="director">Režiser</label>
+      <input type="text" id="director" [(ngModel)]="criteria.director" name="director" />
+  
+      <label for="actors">Glumci</label>
+      <input type="text" id="actors" [(ngModel)]="criteria.actors" name="actors" placeholder="Odvojeni zarezom" />
+  
+      <label for="releaseDate">Datum izlaska</label>
+      <input type="text" id="releaseDate" [(ngModel)]="criteria.releaseDate" name="releaseDate" />
+  
+      <button type="submit">Pretraži</button>
+    </form>
+  
+    <div *ngIf="searchResults.length > 0" class="results">
+      <h3>Rezultati Pretrage:</h3>
+      <div *ngFor="let movie of searchResults">
+        <h4>{{ movie.title }}</h4>
+        <p>{{ movie.genre }}</p>
+        <p>{{ movie.director }}</p>
+        <p>{{ movie.releaseDate }}</p>
+      </div>
+    </div>
+    <div *ngIf="searchResults.length === 0" class="no-results">
+      <p>Nema rezultata za vašu pretragu.</p>
+    </div>    
+  </div>
+  

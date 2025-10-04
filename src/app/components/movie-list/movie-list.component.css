@@ -1,0 +1,137 @@
+  header {
+    position: sticky;
+    top: 0; 
+    z-index: 1000; 
+    background-color: #f4f4f4;
+    padding: 10px 20px;
+    border: 2px solid #ddd;
+  }
+  
+
+  .movie-list-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .movie-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 1200px;
+  }
+  
+  .movie-image {
+    width: 150px;
+    height: 225px;
+    object-fit: cover;
+    margin-right: 20px;
+  }
+  
+  .movie-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .movie-item h3 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+  
+  .movie-item p {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  .movie-rating {
+    margin-top: 10px;
+  }
+  
+  .star-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+  }
+  
+  button {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  .selected-movies {
+    margin-top: 30px;
+  }
+  
+  .movie-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .search-container {
+    margin-top: 20px;
+    width: 500px;
+    margin: 15px auto 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin: 10px 0 5px;
+  }
+  
+  input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  .results {
+    margin-top: 20px;
+  }
+  
+  .no-results {
+    margin-top: 20px;
+    color: red;
+  }
+
+  
+  

@@ -1,0 +1,31 @@
+<div class="register-container">
+    <h2>Registracija</h2>
+    <form (ngSubmit)="register(loginForm)" #loginForm="ngForm">
+      <label for="name">Ime i Prezime</label>
+      <input type="text" id="name" [(ngModel)]="name" name="name" #nameInput="ngModel" required />
+      <div *ngIf="nameInput.invalid && nameInput.touched" class="error-message">Ime i prezime je obavezno!</div>
+  
+      <label for="email">Email</label>
+      <input type="email" id="email" [(ngModel)]="email" name="email" #emailnput="ngModel" required />
+      <div *ngIf="emailnput.invalid && emailnput.touched" class="error-message">Email je obavezan!</div>
+
+      <label for="password">Lozinka</label>
+      <input type="password" id="password" [(ngModel)]="password" name="password" #passwordlnput="ngModel" required />
+      <div *ngIf="passwordlnput.invalid && passwordlnput.touched" class="error-message">Lozinka je obavezna!</div>
+  
+      <label for="phone">Telefon</label>
+      <input type="text" id="phone" [(ngModel)]="phone" name="phone" #phoneInput="ngModel" required />
+      <div *ngIf="phoneInput.invalid && phoneInput.touched" class="error-message">Telefon je obavezan!</div>
+  
+      <label for="address">Adresa</label>
+      <input type="text" id="address" [(ngModel)]="address" name="address" #addressInput="ngModel" required />
+      <div *ngIf="addressInput.invalid && addressInput.touched" class="error-message">Adresa je obavezna!</div>
+  
+      <label for="favoriteGenres">Omiljeni žanrovi</label>
+      <input type="text" id="favoriteGenres" [(ngModel)]="favoriteGenres" name="favoriteGenres" placeholder="Unesite žanrove, odvojene zarezom" #favoriteGenresInput="ngModel" required />
+      <div *ngIf="favoriteGenresInput.invalid && favoriteGenresInput.touched" class="error-message">Najmanje jedan žanr je obavezan!</div>
+  
+      <button type="submit">Registruj se</button>
+    </form>
+  </div>
+  

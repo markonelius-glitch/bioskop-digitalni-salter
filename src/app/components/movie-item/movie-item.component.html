@@ -1,0 +1,26 @@
+<div class="movie-item">
+    <div class="movie-image">
+      <img [src]="'assets/images/' + movie.image_url" alt="{{ movie.title }} image" />
+    </div>
+    
+    <div class="movie-details">
+      <h2 class="movie-title">{{ movie.title }}</h2>
+      <p class="movie-director">Režiser: {{ movie.director }}</p>
+      <p class="movie-genre">Žanr: {{ movie.genre }}</p>
+      <p class="movie-duration">Trajanje: {{ movie.duration }} min</p>
+      <app-rating-stars [rating]="movie.rating"></app-rating-stars>
+      <button (click)="navigateToMovieDetail(movie.id)" class="detail-button">Vidi detalje</button>
+      
+      <div class="movie-showtimes">
+        <h3>Projekcije:</h3>
+        <ul>
+          <li *ngFor="let showtime of movie.showtimes">
+            <span>{{ showtime.date }} - {{ showtime.time }}</span>
+            <span class="showtime-price">{{showtime.price | number:'1.2-2' }} RSD</span>
+            <button (click)="reserveMovie(movie.id, showtime)" class="reserve-button">Rezerviši</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  

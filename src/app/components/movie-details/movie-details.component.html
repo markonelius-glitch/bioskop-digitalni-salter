@@ -1,0 +1,35 @@
+<header>
+    <app-header></app-header>
+</header>
+
+<div class="movie-form-container">
+    <form [formGroup]="movieForm" (ngSubmit)="onSubmit()">
+      <div class="movie-info">
+        <div class="movie-image">
+            <img [src]="'assets/images/' + movie.image_url" alt="{{ movie.title }} image" />
+          </div>
+        <h2>{{ movie.title }}</h2>
+        <p>{{ movie.description }}</p>
+        <p><strong>Žanr:</strong> {{ movie.genre }}</p>
+        <p><strong>Režiser:</strong> {{ movie.director }}</p>
+        <p><strong>Glumci:</strong> {{ movie.actors.join(', ') }}</p>
+        <p><strong>Trajanje:</strong> {{ movie.duration }} minuta</p>
+        <p><strong>Datum izlaska:</strong> {{ movie.releaseDate }}</p>
+        <app-rating-stars [rating]="movie.rating"></app-rating-stars>
+      </div>
+
+      <div *ngIf="false">
+        <label for="rating">Oceni film:</label>
+        <input type="number" id="rating" formControlName="rating" min="1" max="5" placeholder="Oceni film (1-5)" />
+      </div>
+      <div *ngIf="false">
+        <label for="review">Recenzija:</label>
+        <textarea id="review" formControlName="review" placeholder="Unesite vaš komentar..."></textarea>
+      </div>
+  
+      <button *ngIf="false" type="submit" [disabled]="movieForm.invalid">Pošaljite</button>
+
+      <app-movie-review-list [movieId]="movie.id"></app-movie-review-list>
+    </form>
+  </div>
+  

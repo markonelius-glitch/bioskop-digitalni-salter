@@ -1,0 +1,22 @@
+<div class="reservation-item">
+    <!-- Prikazivanje osnovnih podataka o filmu -->
+    <div class="movie-details">
+      <h3>{{ movie.title }}</h3>
+      <p><strong>Žanr:</strong> {{ movie.genre }}</p>
+      <p><strong>Direktor:</strong> {{ movie.director }}</p>
+      <p><strong>Projekcija:</strong> {{ reservation.showtime.date }} u {{ reservation.showtime.time }}</p>
+      <p><strong>Status:</strong> {{ reservation.status }}</p>
+    </div>
+
+    <!-- Deo za status 'Rezervisano' -->
+    <div *ngIf="reservation.status === 'reserved'" class="reserved-section">
+      <button (click)="markAsWatched()" class="nav-button">Označi kao gledano</button>
+      <button (click)="cancelReservation()" class="cancel-button">Otkazi rezervaciju</button>
+    </div>
+  
+    <!-- Deo za status 'Gledano' -->
+    <div *ngIf="reservation.status === 'watched'" class="watched-section">
+      <app-movie-review [movieId]="reservation.movieId" *ngIf="reservation.status === 'watched'"></app-movie-review>
+    </div>    
+  </div>
+  

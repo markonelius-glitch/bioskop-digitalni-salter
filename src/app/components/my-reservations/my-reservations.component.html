@@ -1,0 +1,15 @@
+<header>
+    <app-header></app-header>
+</header>
+
+<div class="my-reservations">
+    <h2>Moje Rezervacije</h2>
+    <div *ngFor="let reservation of reservations">
+      <app-reservation-item
+        [reservation]="reservation"
+        [movie]="getMovieById(reservation.movieId)"
+        (cancelReservationEvent)="onCancelReservation($event)">
+      </app-reservation-item>
+    </div>
+  </div>
+  

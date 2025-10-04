@@ -1,0 +1,95 @@
+* {
+  box-sizing: border-box;
+}
+
+.movie-review-form-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.rating-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.rating-container label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.rating-container input {
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+.rating-container input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.review-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.review-container label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.review-container textarea {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: vertical;
+  outline: none;
+  min-height: 100px;
+}
+
+.review-container textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.submit-button {
+  align-self: flex-end;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}

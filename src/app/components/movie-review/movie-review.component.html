@@ -1,0 +1,16 @@
+<div class="movie-review-form-container">
+  <form [formGroup]="movieForm" (ngSubmit)="onSubmit()">
+    
+    <div class="rating-container">
+      <label for="rating">Oceni film:</label>
+      <input type="number" id="rating" formControlName="rating" min="1" max="5" placeholder="Oceni film (1-5)" />
+    </div>
+    
+    <div class="review-container">
+      <label for="review">Recenzija:</label>
+      <textarea id="review" formControlName="review" placeholder="Unesite vaš komentar..." rows="4"></textarea>
+    </div>
+
+    <button type="submit" [disabled]="movieForm.invalid" class="submit-button">Pošalji</button>
+  </form>
+</div>
